@@ -1,0 +1,1 @@
+window.alert("WELLCOME TO MY REG PAGE)
