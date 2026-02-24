@@ -1,25 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
 
+    const form = document.getElementById("studentForm");
 
-function ShowInfo(){
-    let  sname = document.getElementById("sName").value.trim();
-    let sGpa = document.getElementById("sGpa").value.trim();
+    form.addEventListener("submit", function (event) {
 
-    let errors = [];
+        event.preventDefault(); // stop page reload
 
-    if(sname == ""){
-        errors.push("Student Name Is Required!");
-    }
+        const formData = new FormData(form);
 
-    if(sGpa == ""){
-        errors.push("Student CGPA Is Required!");
-    }
+        // Convert all form data into object
+        const data = Object.fromEntries(formData.entries());
 
-    if(errors.length > 0){
-        alert(errors.join("\n"));
-        return;
-    }
+        // Checkbox handling (important)
+        data.terms = form.querySelector('input[name="terms"]').checked;
 
-    alert(sname +"'s Gpa Is :"+sGpa);
-    
-   
-}
+        // File handling
+        const fileInput = form.querySelector('input[name="file"]');
+        data.file = fileInput.files.length > 0 ? fileInput.files[0].name : null;
+
+        console.log(data);
+
+        alert("Form Submitted Successfully!");
+    });
+
+});
