@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact Us</h1>
+
+<form>
+
+<div class="row">
+<div class="col">
+<label>First Name</label>
+<input type="text" id="fname">
+</div>
+
+<div class="col">
+<label>Last Name</label>
+<input type="text" id="lname">
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+<label>Email</label>
+<input type="email" id="email">
+</div>
+
+<div class="col">
+<label>Phone</label>
+<input type="number" id="phone">
+</div>
+</div>
+
+<div class="full">
+<label>Gender</label>
+
+<div class="gender" style="margin-top:6px; display:flex; gap:20px;">
+
+<div>
+<input type="radio" name="gender" value="male">
+<label>Male</label>
+</div>
+
+<div>
+<input type="radio" name="gender" value="female">
+<label>Female</label>
+</div>
+
+</div>
+</div>
+
+<div class="full">
+<label>What Do You Have In Mind</label>
+<textarea id="query"></textarea>
+</div>
+
+<button type="button" class="btn" onclick="getdata()">Submit</button>
+
+</form>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="../script/index.js"></script>
+
+</body>
+</html>
