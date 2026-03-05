@@ -9,6 +9,8 @@
 <body>
 
     <h1>Contact Us</h1>
+    
+
     <form>
 <table>
     <tr>
@@ -18,24 +20,34 @@
         </td>
 
          <td>
-            <label for="fname">Last Name:</label><br>
-            <input type="text" id="fname">
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname">
+        </td>
+        
+    </tr>
+
+   <tr>
+        <td>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email">
+        </td>
+
+         <td>
+            <label for="phone">Phone NO:</label><br>
+            <input type="number" id="phone">
         </td>
         
     </tr>
 
     <tr>
-        <td>Rion</td>
-        <td>20</td>
-        <td>Bangladesh</td>
+        <td colspan="2">
+            <label for="query">What Do You Have In Mind</label><br>
+            <textarea id="query" placeholder="Please enter query..."></textarea>
+        </td>
     </tr>
-
-    <tr>
-        <td>Alex</td>
-        <td>22</td>
-        <td>USA</td>
-    </tr>
+   
 </table>
+    <button class="btn">Submit</button>
     </form>
     <script src="index.js"></script>   
 </body>
