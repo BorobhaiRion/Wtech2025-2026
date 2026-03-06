@@ -1,19 +1,68 @@
-const supabaseUrl = "???";
-const supabaseKey = "???";
-
+const supabaseUrl = "https://hwvgqmxjvesksvnbqwby.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3dmdxbXhqdmVza3N2bmJxd2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3MzM4NjYsImV4cCI6MjA4ODMwOTg2Nn0.9BVR43r1vJ7AbnnSwkUMqSoIGCS2u4odlWECVLQ_8so";
 
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
 async function getdata(){
 
-    const fname = document.getElementById("fname").value;
-    const lname = document.getElementById("lname").value;
+    const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("query").value;
 
     const genderElement = document.querySelector('input[name="gender"]:checked');
     const gender = genderElement ? genderElement.value : "";
+
+    let errors = [];
+
+    //validation for the first name field
+    if(fname === "" ){
+        errors.push("First Name is Required !");
+    }
+    if(!/^[A-Za-z]+$/.test(fname)){
+    errors.push("First name must contain only letters");
+    }
+
+    //validation for last name
+    if(lname === "" ){
+        errors.push("First Name is Required !");
+    }
+    if(!/^[A-Za-z]+$/.test(lname)){
+    errors.push("First name must contain only letters");
+    }
+
+    //validation for email
+    if(email === ""){
+        errors.push("Email is required");
+    }
+    else if(!email.includes("@")){
+        errors.push("Email is not valid");
+    }
+
+    // Phone validation
+    if(phone === ""){
+        errors.push("Phone number is required");
+    }
+    else if(phone.length < 11){
+        errors.push("Phone number must be at least 10 digits");
+    }
+
+    // Gender validation
+    if(gender === ""){
+        errors.push("Please select gender");
+    }
+
+    // Message validation
+    if(message === ""){
+        errors.push("Message cannot be empty");
+    }
+
+    // If errors exist stop and show them
+    if(errors.length > 0){
+        alert(errors.join("\n"));
+        return;
+    }
 
     const { error } = await client
     .from("contacts")
