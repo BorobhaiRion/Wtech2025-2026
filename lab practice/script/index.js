@@ -1,5 +1,3 @@
-const supabaseUrl = "https://hwvgqmxjvesksvnbqwby.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3dmdxbXhqdmVza3N2bmJxd2J5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3MzM4NjYsImV4cCI6MjA4ODMwOTg2Nn0.9BVR43r1vJ7AbnnSwkUMqSoIGCS2u4odlWECVLQ_8so";
 
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
@@ -45,7 +43,7 @@ async function getdata(){
         errors.push("Phone number is required");
     }
     else if(phone.length < 11){
-        errors.push("Phone number must be at least 10 digits");
+        errors.push("Phone number must be at least 11 digits");
     }
 
     // Gender validation
