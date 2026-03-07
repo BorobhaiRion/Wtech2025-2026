@@ -1,3 +1,6 @@
+const supabaseUrl = "???";
+const supabaseKey = "???";
+
 
 const client = supabase.createClient(supabaseUrl, supabaseKey);
 
