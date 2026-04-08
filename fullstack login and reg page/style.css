@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Anton&display",sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(to right,rgba(84, 255, 127, 0.268),rgba(84, 219, 243, 0.981)) ;
+    color: #333;
+}
+.container{
+    margin: 0 15px;
+}
+.form-box{
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background:white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: none;
+
+}
+.form-box.active{
+    display: block;
+}
+
+h2{
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+input,select{
+    width: 100%;
+    padding: 12px;
+    background: #eee;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+button{
+     width: 100%;
+    padding: 12px;
+    background: #1c8bebb0;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+button:hover{ 
+    background: rgb(0, 170, 255);
+}
+
+p{
+    font-size: 14.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+p a{
+    color:  rgb(0, 170, 255);
+    text-decoration: none;
+}
+p a:hover{
+    text-decoration: underline;
+    color: brown;
+}

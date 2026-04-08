@@ -35,5 +35,5 @@
                             "USA" =>"New York",
                                 "India" =>"Idk");
    $capital = $capitals[$_POST["country"]];
-    echo"The CAPITAL is {$capital} "
+    echo "The CAPITAL is {$capital} "
 ?>
