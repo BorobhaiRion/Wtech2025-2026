@@ -1,10 +1,13 @@
+<?php
+include "../controller/RegistrationValidation.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Registration log in Form</title>
 </head>
 <body>
-    <form method="post">
+    <form method="post" action="">
         <table>
             <tr>
                 <td><p style='color:red'>required field *</p></td>
