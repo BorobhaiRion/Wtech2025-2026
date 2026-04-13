@@ -4,7 +4,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: "Anton&display",sans-serif;
+    font-family: "Anton", sans-serif;
 }
 
 body{
@@ -17,6 +17,9 @@ body{
 }
 .container{
     margin: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .form-box{
     width: 100%;
@@ -50,8 +53,9 @@ input,select{
     color: #333;
     margin-bottom: 20px;
 }
-button{
-     width: 100%;
+button, .btn{
+    display: inline-block;
+    width: 100%;
     padding: 12px;
     background: #1c8bebb0;
     border-radius: 6px;
@@ -62,8 +66,10 @@ button{
     margin-bottom: 20px;
     font-weight: 700;
     transition: 0.5s;
+    text-align: center;
+    text-decoration: none;
 }
-button:hover{ 
+button:hover, .btn:hover{ 
     background: rgb(0, 170, 255);
 }
 
@@ -75,8 +81,18 @@ p{
 p a{
     color:  rgb(0, 170, 255);
     text-decoration: none;
+    cursor: pointer;
 }
 p a:hover{
     text-decoration: underline;
     color: brown;
+}
+.error-message{
+   padding: 12px;
+   background: rgba(239, 232, 232, 0.819);
+   border-radius: 6px;
+   font-size: 16px;
+   color: rgba(109, 8, 8, 0.855);
+   text-align: center;
+   margin-bottom: 20px; 
 }
