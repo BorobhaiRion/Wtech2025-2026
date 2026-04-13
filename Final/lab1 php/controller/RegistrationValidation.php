@@ -12,13 +12,22 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $email = $_POST["email"];
     $website = $_POST["website"];
     $comment = $_POST["comment"];
-    $gender = $_POST["gender"];
+
+    // use isset for radio button
+    if(isset($_POST["gender"]))
+    {
+        $gender = $_POST["gender"];
+    }
 
     $name = $_REQUEST["name"];
     $email = $_REQUEST["email"];
     $website = $_REQUEST["website"];
     $comment = $_REQUEST["comment"];
-    $gender = $_REQUEST["gender"];
+
+    if(isset($_REQUEST["gender"]))
+    {
+        $gender = $_REQUEST["gender"];
+    }
 
 }
 
