@@ -43,16 +43,16 @@ include "../controller/RegistrationValidation.php";
                     <input type="radio" name="gender" id="female" value="Female">
                     <label for="female">Female</label>
 
-                    <input type="radio" name="gender" id="male" value="Male" style="margin-left:15px;">
+                    <input type="radio" name="gender" id="male" value="Male" >
                     <label for="male">Male</label>
 
-                    <input type="radio" name="gender" id="other" value="Other" style="margin-left:15px;">
-                    <label for="other">Other</label>
+                    <input type="radio" name="gender" id="other" value="Other" >
+                    <label for="other">other</label>
                 </td>
             </tr>
 
             <tr>
-                <td><input type="submit" id="submit" name="submit"></td>
+                <td><input type="submit" id="submit" name="submit" value="Registrater"></td>
             </tr>
 
         </table>

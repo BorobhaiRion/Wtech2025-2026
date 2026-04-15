@@ -19,15 +19,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     }
 
 
-    $name = $_REQUEST["name"];
-    $email = $_REQUEST["email"];
-    $website = $_REQUEST["website"];
-    $comment = $_REQUEST["comment"];
+    // $name = $_REQUEST["name"];
+    // $email = $_REQUEST["email"];
+    // $website = $_REQUEST["website"];
+    // $comment = $_REQUEST["comment"];
 
-    if(isset($_REQUEST["gender"]))
-    {
-        $gender = $_REQUEST["gender"];
-    }
+    // if(isset($_REQUEST["gender"]))
+    // {
+    //     $gender = $_REQUEST["gender"];
+    // }
 
 
 
