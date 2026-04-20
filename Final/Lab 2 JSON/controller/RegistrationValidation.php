@@ -24,37 +24,32 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $isValid = true;
 
     if(!empty($name) && strlen($name)>=5){
-        echo "User Name: $name<br>";
+
     } else {
-        echo "User-Name must be greater than 5 char<br>";
         $isValid = false;
     }
 
     if(!empty($email) && preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)){
-        echo "Email: $email<br>";
+        
     } else {
-        echo "Invalid Email<br>";
         $isValid = false;
     }
 
     if(!empty($website) && preg_match("/^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $website)){
-        echo "Website: $website<br>";
+        
     } else {
-        echo "Invalid Website URL<br>";
         $isValid = false;
     }
 
     if(!empty($comment)){
-        echo "Comment: $comment<br>";
+        
     } else {
-        echo "Comment cannot be empty<br>";
         $isValid = false;
     }
 
     if(!empty($gender)){
-        echo "Gender: $gender<br>";
+       
     } else {
-        echo "Please select a gender<br>";
         $isValid = false;
     }
 
@@ -63,9 +58,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $_SESSION["name"] = $name;
         setcookie("name", $name, time()+3600, "/");
 
-        echo "<br>Login Successful<br>";
-
-        $formdata = array("Name"=>$name, "Email"=>$email,"Website"=>$website,"Comment"=>$comment, "Gender"=>$gender);
+        $formdata = array(
+            "Name"=>$name,
+            "Email"=>$email,
+            "Website"=>$website,
+            "Comment"=>$comment,
+            "Gender"=>$gender
+        );
 
         if(file_exists($datafile)){
             $existdata = file_get_contents($datafile);
@@ -82,26 +81,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
         $jsondata = json_encode($tempdata, JSON_PRETTY_PRINT);
 
-        if(file_put_contents($datafile, $jsondata)!== false){
-            echo "Data Saved<br>";
-        } else {
-            echo "Pleae try Again<br>";
-        }
-        
-         $data = file_get_contents($datafile);
-                $mydata = json_decode($data);
-            }
-            else{
-                echo "Please try again!";
-            }
-   
-    
-}
+        file_put_contents($datafile, $jsondata);
 
-
-if(isset($_SESSION["name"]) || isset($_COOKIE["name"])){
-    echo "<br>Welcome Back!";
-} else {
-    echo "<br>Please log in again!";
+        header("Location: userPage.php");
+        exit();
+    }
+    else{
+        echo "Please try again!";
+    }
 }
 ?>
