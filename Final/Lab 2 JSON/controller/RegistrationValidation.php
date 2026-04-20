@@ -1,5 +1,5 @@
 <?php 
-//i have used a isvalid() func iam fully aware what it does and i have explained it in the comments sir.
+//i have used a isvalid() func iam fully aware what it does and i have explained it in the comments .
 session_start();
 
 $name = "";
