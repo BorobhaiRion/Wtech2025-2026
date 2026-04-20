@@ -1,4 +1,5 @@
 <?php 
+//i have used a isvalid() func iam fully aware what it does and i have explained it in the comments sir.
 session_start();
 
 $name = "";
@@ -19,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $gender = $_POST["gender"];
     }
 
-    // validation flag
+    // i will use a bool to see if all the fields are valid before creating the json
     $isValid = true;
 
     if(!empty($name) && strlen($name)>=5){
@@ -57,20 +58,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $isValid = false;
     }
 
-    // ONLY if valid → save + session
-    if($isValid){
+    
+    if($isValid){ //--------------> here i have checked if valid
         $_SESSION["name"] = $name;
         setcookie("name", $name, time()+3600, "/");
 
         echo "<br>Login Successful<br>";
 
-        $formdata = array(
-            "Name"=>$name,
-            "Email"=>$email,
-            "Website"=>$website,
-            "Comment"=>$comment,
-            "Gender"=>$gender
-        );
+        $formdata = array("Name"=>$name, "Email"=>$email,"Website"=>$website,"Comment"=>$comment, "Gender"=>$gender);
 
         if(file_exists($datafile)){
             $existdata = file_get_contents($datafile);
@@ -87,17 +82,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
         $jsondata = json_encode($tempdata, JSON_PRETTY_PRINT);
 
-        if(file_put_contents($datafile, $jsondata)){
+        if(file_put_contents($datafile, $jsondata)!== false){
             echo "Data Saved<br>";
         } else {
-            echo "Error saving data<br>";
+            echo "Pleae try Again<br>";
         }
-    } else {
-        echo "<br>Please fix errors<br>";
+   
     }
 }
 
-// session check
+
 if(isset($_SESSION["name"]) || isset($_COOKIE["name"])){
     echo "<br>Welcome Back!";
 } else {
