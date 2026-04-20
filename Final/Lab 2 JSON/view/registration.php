@@ -59,3 +59,4 @@ include "../controller/RegistrationValidation.php";
     </form>
 </body>
 </html>
+
