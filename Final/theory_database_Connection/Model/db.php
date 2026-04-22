@@ -1,32 +1,38 @@
 <?php
-    class db{
-        function connection(){
-            $db_host = "localhost";
-            $db_user = "root";
-            $db_password = "";
-            $db_name ="users";
+class db{
 
-            $connection = new mysqli($db_host,$db_user,$db_password,$db_name);
+    function connection(){
+        $db_host = "localhost";
+        $db_user = "root";
+        $db_password = "";
+        $db_name = "users";
 
-            if($connection -> connect_error){
-                die("Connection error: ".$connection ->connect_error);
-            }
-            return $connection;
+        $connection = new mysqli($db_host,$db_user,$db_password,$db_name);
+
+        if($connection->connect_error){
+            die("Connection error: ".$connection->connect_error);
         }
-        
-        function signup($connection, $tablename, $username, $email, $website, $comment, $gender){
 
-    $sql = "INSERT INTO " . $tablename . " (username, email, website, comment, gender)
-            VALUES ('" . $username . "', '" . $email . "', '" . $website . "', '" . $comment . "', '" . $gender . "')";
+        return $connection;
+    }
 
-    $result = $connection->query($sql);
-    return $result;
-}
+    function signup($connection, $tablename, $username, $email, $website, $comment, $gender, $password){
 
-        function signin($connection, $tablename, $username, $password){
-        $sql = "SELECT * FROM ".$tablename." WHERE username ='".$username."' AND password='".$password."'";
+        $sql = "INSERT INTO " . $tablename . " (username, email, website, comment, gender, password)
+                VALUES ('" . $username . "', '" . $email . "', '" . $website . "', '" . $comment . "', '" . $gender . "', '" . $password . "')";
+
         $result = $connection->query($sql);
-        return $result; 
-        }
-    }   
+        return $result;
+    }
+
+    function signin($connection, $tablename, $username, $password)
+    {
+        $sql = "SELECT * FROM " . $tablename . " 
+                WHERE username = '" . $username . "' 
+                AND password = '" . $password . "'";
+
+        $result = $connection->query($sql);
+        return $result;
+    }
+}
 ?>

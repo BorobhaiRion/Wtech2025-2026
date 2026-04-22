@@ -111,12 +111,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             $email,
             $website,
             $comment,
-            $gender
+            $gender,
+            $password
         );
 
             if($result)
             {
-                header("Location: ../View/userPage.php");
+                header("Location: ../View/Login.php");
                 exit();
             }    
 
