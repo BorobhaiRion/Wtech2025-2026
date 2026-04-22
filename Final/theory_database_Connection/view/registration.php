@@ -20,6 +20,12 @@ include "../controller/RegistrationValidation.php";
             </tr>
 
             <tr>
+                <td><label for="name">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+                <td><p style='color:red'>*</p></td>
+            </tr>
+
+            <tr>
                 <td><label for="email">Email:</label></td>
                 <td><input type="email" id="email" name="email"></td>
                 <td><p style='color:red'>*</p></td>

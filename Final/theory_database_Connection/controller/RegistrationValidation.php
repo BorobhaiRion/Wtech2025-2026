@@ -3,6 +3,7 @@
 session_start();
 
 $name = "";
+$password="";
 $email = "";
 $website = "";
 $comment = "";
@@ -12,6 +13,7 @@ $datafile ="../data.json";
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
     $name = $_POST["name"];
+    $password = $_POST["password"];
     $email = $_POST["email"];
     $website = $_POST["website"];
     $comment = $_POST["comment"];
@@ -26,30 +28,40 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     if(!empty($name) && strlen($name)>=5){
 
     } else {
+        echo"Username is not valid<br>";
         $isValid = false;
     }
+      if(!empty($password) && strlen($password)>=4){
 
+    } else {
+        echo"password Username is not valid <br>";
+        $isValid = false;
+    }
     if(!empty($email) && preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email)){
         
     } else {
+        echo"Email is not valid <br>";
         $isValid = false;
     }
 
     if(!empty($website) && preg_match("/^(https?:\/\/)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $website)){
         
     } else {
+        echo"Website is not valid <br>";
         $isValid = false;
     }
 
     if(!empty($comment)){
         
     } else {
+        echo"Comment is empty <br>";
         $isValid = false;
     }
 
     if(!empty($gender)){
        
     } else {
+        echo"Gender is not selected <br>";
         $isValid = false;
     }
 
@@ -60,6 +72,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
         $formdata = array(
             "Name"=>$name,
+            "password"=>$password,
             "Email"=>$email,
             "Website"=>$website,
             "Comment"=>$comment,
