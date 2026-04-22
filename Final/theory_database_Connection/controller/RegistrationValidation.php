@@ -1,5 +1,6 @@
 <?php 
 //i have used a isvalid() func iam fully aware what it does and i have explained it in the comments .
+include"../Model/db.php";
 session_start();
 
 $name = "";
@@ -95,12 +96,37 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         $jsondata = json_encode($tempdata, JSON_PRETTY_PRINT);
 
         file_put_contents($datafile, $jsondata);
-
-        header("Location: userPage.php");
-        exit();
     }
     else{
         echo "Please try again!";
     }
+    //Database connection process
+        $database = new db();
+        $connection = $database->connection();
+
+        $result = $database->signup(
+            $connection,
+            "user",
+            $name,
+            $email,
+            $website,
+            $comment,
+            $gender
+        );
+
+            if($result)
+            {
+                header("Location: ../View/userPage.php");
+                exit();
+            }    
+
+//Checking session
+         if(isset($_SESSION["name"]) || isset($_COOKIE["name"]))
+            {
+                echo "Welcome Back";
+            }
+        else{
+        echo "pLease log in agian!"; 
+            }
 }
 ?>

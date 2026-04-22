@@ -14,11 +14,14 @@
             return $connection;
         }
         
-        function signup($connection, $tablename, $username, $password){
-            $sql = "INSERT INTO".$tablename."(username,password) VALUES ('".$username."', '".$password."')";
-            $result = $connection->query($sql);
-            return $result;
-        }
+        function signup($connection, $tablename, $username, $email, $website, $comment, $gender){
+
+    $sql = "INSERT INTO " . $tablename . " (username, email, website, comment, gender)
+            VALUES ('" . $username . "', '" . $email . "', '" . $website . "', '" . $comment . "', '" . $gender . "')";
+
+    $result = $connection->query($sql);
+    return $result;
+}
 
         function signin($connection, $tablename, $username, $password){
         $sql = "SELECT * FROM ".$tablename." WHERE username ='".$username."' AND password='".$password."'";
