@@ -100,26 +100,24 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     else{
         echo "Please try again!";
     }
-    //Database connection process
-        $database = new db();
-        $connection = $database->connection();
+    //Database connection
+    $database = new db();
+    $connection = $database->connection();
 
-        $result = $database->signup(
-            $connection,
-            "user",
-            $name,
-            $email,
-            $website,
-            $comment,
-            $gender,
-            $password
-        );
+    $result = $database-> signup(
+        $connection,
+        "user",
+        $name,
+        $password,
+        $email,
+        $website,
+        $comment,
+        $gender
+    );
 
-            if($result)
-            {
-                header("Location: ../View/Login.php");
-                exit();
-            }    
+    if($result){
+        header("Location:../View/Login.php");
+    }
 
 //Checking session
          if(isset($_SESSION["name"]) || isset($_COOKIE["name"]))

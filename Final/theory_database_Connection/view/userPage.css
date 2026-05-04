@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* container */
+.container {
+    width: 90%;
+    margin: 40px auto;
+}
+
+/* header box */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #777;
+    margin: 0;
+}
+
+/* section title */
+h3 {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* table design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* header row */
+th {
+    background: #4a90e2;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+}
+
+/* table cells */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* hover effect */
+tr:hover {
+    background: #f1f7ff;
+    transition: 0.3s;
+}
+
+/* logout button */
+.logout {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background: #c0392b;
+}

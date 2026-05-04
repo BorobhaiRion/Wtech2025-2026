@@ -1,66 +1,6 @@
 [
     {
-        "Name": "Rion Khan",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.GGS.com",
-        "Comment": "gg",
-        "Gender": "Male"
-    },
-    {
-        "Name": "Rion Khan",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.GGS.com",
-        "Comment": "ghj",
-        "Gender": "Male"
-    },
-    {
-        "Name": "Rion Khan",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.GGS.com",
-        "Comment": "ghj",
-        "Gender": "Male"
-    },
-    {
-        "Name": "Rion Khan",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.GGS.com",
-        "Comment": "ghj",
-        "Gender": "Male"
-    },
-    {
-        "Name": "MD Foize khan RION",
-        "password": "1234567",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.gg.com",
-        "Comment": "gg",
-        "Gender": "Male"
-    },
-    {
-        "Name": "MD Foize khan RION",
-        "password": "1234567",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.gg.com",
-        "Comment": "gg",
-        "Gender": "Male"
-    },
-    {
-        "Name": "MD Foize khan RION",
-        "password": "1234567",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.gg.com",
-        "Comment": "gg",
-        "Gender": "Male"
-    },
-    {
-        "Name": "MD Foize khan RION",
-        "password": "1234567",
-        "Email": "rion801@gmail.com",
-        "Website": "https:\/\/www.gg.com",
-        "Comment": "gg",
-        "Gender": "Male"
-    },
-    {
-        "Name": "MD Foize khan RION",
+        "Name": "md Foize khan",
         "password": "12345678",
         "Email": "rion801@gmail.com",
         "Website": "https:\/\/www.gg.com",
@@ -68,27 +8,7 @@
         "Gender": "Male"
     },
     {
-        "name": "MD Foize khan RION",
-        "password": "123456789"
-    },
-    {
-        "name": "MD Foize khan RION",
-        "password": "123456789"
-    },
-    {
-        "name": "MD Foize khan RION",
-        "password": "123456789"
-    },
-    {
-        "name": "MD Foize khan RION",
-        "password": "123456789"
-    },
-    {
-        "name": "MD Foize khan RION",
-        "password": "123456678"
-    },
-    {
-        "Name": "MD Foize khan RION",
+        "Name": "md Foize khan",
         "password": "12345678",
         "Email": "rion801@gmail.com",
         "Website": "https:\/\/www.gg.com",
@@ -96,7 +16,23 @@
         "Gender": "Male"
     },
     {
-        "name": "MD Foize khan RION",
-        "password": "12345678"
+        "Name": "md Foize khan",
+        "password": "12345678",
+        "Email": "rion801@gmail.com",
+        "Website": "https:\/\/www.gg.com",
+        "Comment": "gg",
+        "Gender": "Male"
+    },
+    {
+        "Name": "Rion khan",
+        "password": "12345",
+        "Email": "rion801@gmail.com",
+        "Website": "https:\/\/www.gg.com",
+        "Comment": "gg",
+        "Gender": "Male"
+    },
+    {
+        "name": "rion khan ",
+        "password": "12345"
     }
 ]

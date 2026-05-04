@@ -34,5 +34,14 @@ class db{
         $result = $connection->query($sql);
         return $result;
     }
+    function getUserData($connection, $tablename, $username){
+
+    $sql = "SELECT * FROM " . $tablename . " WHERE username = '" . $username . "'";
+    $result = $connection->query($sql);
+
+    return $result;
+    }
+
 }
 ?>
+

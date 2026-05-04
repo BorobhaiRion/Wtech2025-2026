@@ -23,33 +23,7 @@
             </table>
         </form>
         <?php
-            // echo "<h4 style='color: red'>php Introduction</h4>";
-            // $text1= "Hello World";
-            // echo "<b>$text1</b>";
-            // echo "<br>";
-            // echo '<b>'.$text1. '</b>';
-            // echo "<br>";
-            // $var1 = 10.6;
-            // $var2 = 30;
-            // echo "Sum = $var1 + $var2 = ";
-            // echo $var1 + $var2; 
-            // $course = array("Course:"=>"WebTechnology, IP1", "Pre-requisite:"=>"OOP2", "Next Course;"=>"Python");
-            // var_dump($course);
-            // echo "<br>"; 
-            // echo $course["Course:"];
-            // if($var2>0)
-            //     {
-            //         echo "Number is Positive";
-            //     }
-            //     else
-            //         {
-            //             echo "Negative";
-            //         }
-            // function addnumber($var1, $var2)
-            // {
-                
-            // }
-
+           
         ?>
     </body>
 </html>
